@@ -1,7 +1,7 @@
 /*************
   User input a word and the program displays the word in reverse and determines
   if the word is a palindrome or not.
-/*************
+*************/
 using System;
 using static System.Console;
 using static System.Array;
