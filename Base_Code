@@ -1,0 +1,47 @@
+/*************
+  User input a word and the program displays the word in reverse and determines
+  if the word is a palindrome or not.
+/*************
+using System;
+using static System.Console;
+using static System.Array;
+
+class Palindrome
+{
+    static void Main()
+    {
+        string reverse, palindrome;
+        char[] temp;
+
+        Write("Enter a word: ");
+        palindrome = ReadLine();
+
+        // remove spaces and convert to lowercase
+        reverse = palindrome.Replace(" ", "");
+        //Does all the stuff to the right first, then assigns to value
+        reverse = reverse.ToLower();
+
+        // reverse the array
+        temp = reverse.ToCharArray();
+        Reverse(temp);
+
+        // convert the array back to a string
+        //check if the reverse string is the same
+        if (reverse == new string(temp))
+        {
+            WriteLine($"\"{palindrome}\" is a palindrome");
+        }
+        else
+        {
+            WriteLine($"\"{palindrome}\" is a NOT palindrome");
+        }
+
+        /*
+        // Outputs what the user typed
+        WriteLine(palindrome);
+        //Outputs all the changes to what the user typed
+        WriteLine(reverse);
+        WriteLine(temp);
+        */
+    }
+}
